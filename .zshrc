@@ -32,7 +32,7 @@ plugins=(
     brew
     history
     # kubectl
-    # direnv
+    direnv
 )
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
@@ -54,3 +54,6 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
+
+
+cd ~/

@@ -18,4 +18,4 @@ export PATH="$PATH:$HOME/.istioctl/bin"
 export PATH="$HOME/bin:$PATH"
 
 # DirEnv
-eval "$(direnv hook bash)"
+# eval "$(direnv hook bash)"
