@@ -8,7 +8,7 @@
 # fi
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mihainueleanu/.oh-my-zsh"
+export ZSH="$(pwd)/.oh-my-zsh"
 
 ZSH_THEME="simple"
 ZSH_COLORIZE_STYLE="colorful"
