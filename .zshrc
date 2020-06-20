@@ -21,7 +21,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.profile
+source ~/dotfiles/.profile
 
 # Autocomplete
 autoload -U compinit

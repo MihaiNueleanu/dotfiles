@@ -8,8 +8,7 @@ alias la="ls -lah"
 alias python=/usr/local/bin/python3
 alias pip=/usr/local/bin/pip3
 alias weather="curl wttr.in"
-alias profile="code ~/.profile"
-alias zshrc="code ~/.zshrc"
+alias profile="code ~/dotfiles"
 
 
 # Path variables
