@@ -54,6 +54,3 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
-
-
-cd ~/

@@ -9,6 +9,8 @@ alias python=/usr/local/bin/python3
 alias pip=/usr/local/bin/pip3
 alias weather="curl wttr.in"
 alias profile="code ~/dotfiles"
+alias hyper="code /mnt/c/Users/mn/AppData/Roaming/Hyper/.hyper.js"
+alias ~="cd ~"
 
 
 # Path variables
