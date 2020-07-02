@@ -54,3 +54,11 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
+
+
+# Network discovery
+network() {
+    # ifconfig
+    sudo arp-scan -I  en0 -l
+}
+bindkey -s '^n' 'network\n'
