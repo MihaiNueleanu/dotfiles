@@ -20,6 +20,4 @@ export PATH="$PATH:$HOME/.istioctl/bin"
 export PATH="$HOME/bin:$PATH"
 
 # Golang
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
