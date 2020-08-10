@@ -12,6 +12,18 @@ alias profile="code ~/dotfiles"
 alias hyper="code /mnt/c/Users/mn/AppData/Roaming/Hyper/.hyper.js"
 alias ~="cd ~"
 
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+    alias draw.io='/Applications/draw.io.app/Contents/MacOS/draw.io'
+  ;;
+  Linux)
+    # commands for Linux go here
+  ;;
+  FreeBSD)
+    # commands for FreeBSD go here
+  ;;
+esac
 
 # Path variables
 export GOROOT=/usr/local/go
