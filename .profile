@@ -11,6 +11,13 @@ alias weather="curl wttr.in"
 alias profile="code ~/dotfiles"
 alias hyper="code /mnt/c/Users/mn/AppData/Roaming/Hyper/.hyper.js"
 alias ~="cd ~"
+alias pasc="passCopy"
+
+passCopy() {
+  if type clip.exe > /dev/null; then
+    pass $1 | clip.exe
+  fi
+}
 
 
 # Path variables
