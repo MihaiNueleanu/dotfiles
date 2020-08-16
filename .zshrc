@@ -62,3 +62,12 @@ network() {
     sudo arp-scan -I  en0 -l
 }
 bindkey -s '^n' 'network\n'
+
+
+eval "$(direnv hook zsh)"
+
+alias kioskenv='source ~/workspace/virenv/kiosk/bin/activate'
+
+# Natural key bindings
+bindkey "\e\e[D" backward-word
+bindkey "\e\e[C" forward-word
