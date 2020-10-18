@@ -3,8 +3,37 @@ NEWLINE=$'\n'
 
 export PS1='${NEWLINE}$(pwd)${NEWLINE}> '
 
-alias ic="ibmcloud"
-alias la="ls -lah"
+# Autocomplete
+autoload -U compinit
+compinit 
+
+
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\n'
+
+
+# Network discovery
+network() {
+    # ifconfig
+    sudo arp-scan -I  en0 -l
+}
+bindkey -s '^n' 'network\n'
+
+
+# Natural key bindings
+bindkey "\e\e[D" backward-word
+bindkey "\e\e[C" forward-word
+
+# Aliases
 alias python=/usr/local/bin/python3
 alias pip=/usr/local/bin/pip3
 alias weather="curl wttr.in"
@@ -19,10 +48,12 @@ passCopy() {
   fi
 }
 
+# Platform specific
 case `uname` in
   Darwin)
     # commands for OS X go here
     alias draw.io='/Applications/draw.io.app/Contents/MacOS/draw.io'
+    eval "$(direnv hook zsh)"
   ;;
   Linux)
     # commands for Linux go here
@@ -37,6 +68,4 @@ export GOROOT=/usr/local/go
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.istioctl/bin"
 export PATH="$HOME/bin:$PATH"
-
-# Golang
 export PATH=$PATH:/usr/local/go/bin
