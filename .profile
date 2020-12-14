@@ -41,6 +41,7 @@ alias profile="code ~/dotfiles"
 alias hyper="code /mnt/c/Users/mn/AppData/Roaming/Hyper/.hyper.js"
 alias ~="cd ~"
 alias pasc="passCopy"
+alias nr="npm run"
 
 passCopy() {
   if type clip.exe > /dev/null; then
