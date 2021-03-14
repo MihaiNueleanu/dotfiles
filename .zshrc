@@ -23,6 +23,7 @@ plugins=(
     brew
     history
     kubectl
+    poetry
 )
 
 source ~/.oh-my-zsh/oh-my-zsh.sh

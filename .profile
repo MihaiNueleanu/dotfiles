@@ -34,14 +34,14 @@ bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
 
 # Aliases
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/bin/pip3
+alias python=/usr/bin/python3
+alias pip=/usr/bin/pip3
 alias weather="curl wttr.in"
 alias profile="code ~/dotfiles"
-alias hyper="code /mnt/c/Users/mn/AppData/Roaming/Hyper/.hyper.js"
 alias ~="cd ~"
 alias pasc="passCopy"
 alias nr="npm run"
+alias filebox="ssh -L 8384:localhost:8384 root@filebox.nueleanu.com"
 
 passCopy() {
   if type clip.exe > /dev/null; then
@@ -70,3 +70,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.istioctl/bin"
 export PATH="$HOME/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/.poetry/bin
