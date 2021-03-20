@@ -42,6 +42,7 @@ alias ~="cd ~"
 alias pasc="passCopy"
 alias nr="npm run"
 alias filebox="ssh -L 8384:localhost:8384 root@filebox.nueleanu.com"
+alias genpass="tr -dc 'A-Za-z0-9!#$%&'\''()*+,-./:;<=>?@[\]^_{|}~' </dev/urandom | head -c 50  ; echo"
 
 passCopy() {
   if type clip.exe > /dev/null; then
