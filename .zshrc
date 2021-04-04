@@ -31,7 +31,7 @@ plugins=(
     web-search
     brew
     history
-    # kubectl
+    kubectl
     direnv
 )
 

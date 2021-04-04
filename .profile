@@ -5,8 +5,8 @@ export PS1='${NEWLINE}$(pwd)${NEWLINE}> '
 
 alias ic="ibmcloud"
 alias la="ls -lah"
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/bin/pip3
+alias python=python3
+alias pip=pip3
 alias weather="curl wttr.in"
 alias profile="code ~/dotfiles"
 alias hyper="code /mnt/c/Users/mn/AppData/Roaming/Hyper/.hyper.js"
@@ -33,3 +33,9 @@ export PATH="$HOME/bin:$PATH"
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
+
+# Heroku
+export HEROKU_ORGANIZATION=kiosk
+
+export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:/Users/mihainueleanu/Library/Python/3.8/bin"
