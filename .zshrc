@@ -1,12 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-
-# To enable sourcing from this directory, place this inside ~/.zshrc
-# if [ -r ~/dotfiles/.zshrc ]; then
-#     source ~/dotfiles/.zshrc
-# fi
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -32,42 +23,8 @@ plugins=(
     brew
     history
     kubectl
-    direnv
+    poetry
 )
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/dotfiles/.profile
-
-# Autocomplete
-autoload -U compinit
-compinit 
-
-
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'lfcd\n'
-
-
-# Network discovery
-network() {
-    # ifconfig
-    sudo arp-scan -I  en0 -l
-}
-bindkey -s '^n' 'network\n'
-
-
-eval "$(direnv hook zsh)"
-
-alias kioskenv='source ~/workspace/virenv/kiosk/bin/activate'
-
-# Natural key bindings
-bindkey "\e\e[D" backward-word
-bindkey "\e\e[C" forward-word
