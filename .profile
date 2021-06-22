@@ -43,6 +43,9 @@ alias pasc="passCopy"
 alias nr="npm run"
 alias filebox="ssh -L 8384:localhost:8384 root@filebox.nueleanu.com"
 alias genpass="tr -dc 'A-Za-z0-9!#$%&'\''()*+,-./:;<=>?@[\]^_{|}~' </dev/urandom | head -c 50  ; echo"
+alias loki="kubectl --namespace loki-stack port-forward svc/loki-grafana 8080:80"
+alias grafana="kubectl port-forward svc/kube-prometheus-stack-grafana 9090:80 -n kube-prometheus-stack"
+alias argo="kubectl port-forward svc/argocd-server 7000:443 -n argocd"
 
 passCopy() {
   if type clip.exe > /dev/null; then
@@ -74,3 +77,6 @@ export PATH="$PATH:$HOME/.istioctl/bin"
 export PATH="$HOME/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.poetry/bin
+
+export PATH="$PATH:/usr/local/opt/ruby/bin"
+export PATH="$PATH:/usr/local/lib/ruby/gems/3.0.0/bin"
