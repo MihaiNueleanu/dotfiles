@@ -46,6 +46,7 @@ alias genpass="tr -dc 'A-Za-z0-9!#$%&'\''()*+,-./:;<=>?@[\]^_{|}~' </dev/urandom
 alias loki="kubectl --namespace loki-stack port-forward svc/loki-grafana 8080:80"
 alias grafana="kubectl port-forward svc/kube-prometheus-stack-grafana 9090:80 -n kube-prometheus-stack"
 alias argo="kubectl port-forward svc/argocd-server 7000:443 -n argocd"
+alias odindb="ssh -L 27017:localhost:27017 root@162.55.59.182"
 
 passCopy() {
   if type clip.exe > /dev/null; then
