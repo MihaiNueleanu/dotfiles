@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to the shared clipboard file
-SHARED_CLIPBOARD_FILE="/mnt/macos_shared/clipboard.txt"
+SHARED_CLIPBOARD_FILE="/mnt/mac_share/clipboard.txt"
 
 # Function to monitor the clipboard and file changes
 monitor_clipboard_and_file() {
@@ -28,4 +28,4 @@ monitor_clipboard_and_file() {
 }
 
 # Start monitoring in the background
-monitor_clipboard_and_file &
+monitor_clipboard_and_file 
