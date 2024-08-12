@@ -79,5 +79,5 @@ export PATH="$HOME/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.poetry/bin
 
-export PATH="$PATH:/usr/local/opt/ruby/bin"
-export PATH="$PATH:/usr/local/lib/ruby/gems/3.0.0/bin"
+export PATH="$HOME/.asdf/installs/ruby/3.3.4/bin:$PATH"
+export PATH="$HOME/.asdf/installs/ruby/3.3.4/gems/3.0.0/bin:$PATH"
