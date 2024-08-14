@@ -81,3 +81,9 @@ export PATH=$PATH:$HOME/.poetry/bin
 
 export PATH="$HOME/.asdf/installs/ruby/3.3.4/bin:$PATH"
 export PATH="$HOME/.asdf/installs/ruby/3.3.4/gems/3.0.0/bin:$PATH"
+
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
