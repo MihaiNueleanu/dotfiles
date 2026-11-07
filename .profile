@@ -5,7 +5,7 @@ export PS1='${NEWLINE}$(pwd)${NEWLINE}> '
 
 # Autocomplete
 autoload -U compinit
-compinit 
+compinit
 
 
 # Use lf to switch directories and bind it to ctrl-o
@@ -72,7 +72,9 @@ case `uname` in
 esac
 
 # Path variables
-export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.istioctl/bin"
 export PATH="$HOME/bin:$PATH"
