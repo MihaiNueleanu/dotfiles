@@ -4,6 +4,8 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="simple"
 ZSH_COLORIZE_STYLE="colorful"
 ZSH_DISABLE_COMPFIX="true"
+DISABLE_AUTO_UPDATE=true
+
 
 if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
