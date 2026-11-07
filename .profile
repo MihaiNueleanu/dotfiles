@@ -77,6 +77,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.istioctl/bin"
 export PATH="$HOME/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
 export PATH=$PATH:$HOME/.poetry/bin
 
 export PATH="$HOME/.asdf/installs/ruby/3.3.4/bin:$PATH"
@@ -89,3 +90,6 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 bindkey '^H' backward-kill-word
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+HISTORY_IGNORE="(ls|cd|pwd|exit|cd ..)"
